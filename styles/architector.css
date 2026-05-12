@@ -130,6 +130,18 @@
  .fact-description{
     max-width: 540px;
 } 
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companiec{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companiec img{
+    filter: grayscale(100%);
+}
 /* responsive meida query */
 
 @media screen and (max-width:576px) {
@@ -139,8 +151,15 @@
         flex-direction: column;
       
 }
-.team-img-container{
+
+.team-img-container,
+.facts-container,
+.sponsor-companiec{
     grid-template-columns: repeat(1, 1fr);
+}
+.facts-container, .sponsor-companiec{
+    justify-items: center;
+    gap: 24px;
 }
 .our-features{
     margin-left: 20px;
@@ -155,5 +174,9 @@
     }
     .our-features{
         margin: 50px auto;
+    }
+    .sponsor-companiec, .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
     }
 }

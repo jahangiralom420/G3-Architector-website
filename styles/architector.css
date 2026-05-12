@@ -11,6 +11,9 @@
 .display-flex{
     display: flex;
 }
+.text-primary{
+    color: #FF900E;
+}
 /* dark-02 */
 .text-gray{
     color: #424242;
@@ -27,9 +30,20 @@
     color: white;
     padding: 20px 25px;
     font-size: 1.25rem;
-    font-style: 600px;
+    font-weight: 600;
     border-radius: 8px;
     border: 0;
+}
+.main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.main > section{
+    margin-top: 130px;
+}
+.section-title{
+    font-size:2.8rem;
+    font-weight: 700;
 }
 
 /* header style */
@@ -41,7 +55,7 @@
 }
 
 .brand{
-    font-weight: 700px;
+    font-weight: 550;
     font-size: 2rem;
 }
 .nav-item{
@@ -57,24 +71,89 @@
     margin: 0 auto;
 }
 /* banner related style */
-.banner-content{
-    max-width: 700;
+ .banner-content{
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
-}
+} 
 .banner-title{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3rem;
 }
 .banner-image{
     width: 100%;
 }
-
+  .teams{
+    display: flex;
+    align-items: center;
+    gap: 60px; 
+    max-width: 1050px;
+     margin: 100px auto;  
+ } 
+ .team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+} 
+.our-features{
+    max-width: 300px; 
+}
+#quick-list{
+    font-weight: 500;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+ .fact-number{
+    font-size: 2, 8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+} 
+.fact-name{
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+ .fact-description{
+    max-width: 540px;
+} 
 /* responsive meida query */
 
 @media screen and (max-width:576px) {
-    .navbar, .nav-links{
+    .navbar,
+    .nav-links,
+    .teams{
         flex-direction: column;
+      
+}
+.team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+}
+.our-features{
+    margin-left: 20px;
+}
+
+}
+
+/* medium size device */
+@media screen and (min-width:576px) and (max-width:992px){
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
     }
 }
